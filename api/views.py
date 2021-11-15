@@ -1,11 +1,11 @@
 from django.db.models import Q
 from django.shortcuts import get_object_or_404
-from rest_framework.viewsets import ModelViewSet
 from rest_framework.validators import ValidationError
+from rest_framework.viewsets import ModelViewSet
 
 from .models import Task, default_status
-from .serializers import TaskSerializer
 from .permissions import AdminOrAuthorCanOnlyEditOrDelete
+from .serializers import TaskSerializer
 
 
 class TaskViewSet(ModelViewSet):

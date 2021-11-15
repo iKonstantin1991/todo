@@ -126,8 +126,11 @@ DJOSER = {
     'HIDE_USERS': False,
     'PERMISSIONS': {
         'user_create': ['rest_framework.permissions.IsAdminUser'],
-        'user_delete': ['rest_framework.permissions.IsAdminUser'],
+        'user_delete': ['users.permissions.UserDeletePermission'],
         'user_list': ['rest_framework.permissions.IsAdminUser'],
         'user': ['rest_framework.permissions.IsAdminUser']
+    },
+    'SERIALIZERS': {
+        'user_create': 'users.serializers.CustomUserCreateSerializer',
     },
 }

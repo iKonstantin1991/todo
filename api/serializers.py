@@ -1,10 +1,10 @@
 import datetime as dt
 
 from rest_framework import serializers
-from rest_framework.serializers import ModelSerializer
 from rest_framework.exceptions import ValidationError
+from rest_framework.serializers import ModelSerializer
 
-from .models import Task, statuses, default_status
+from .models import Task, default_status, statuses
 
 
 class TaskSerializer(ModelSerializer):

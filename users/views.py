@@ -1,9 +1,7 @@
-from djoser.views import UserViewSet
 from djoser import utils
-
-
-from rest_framework.response import Response
+from djoser.views import UserViewSet
 from rest_framework import status
+from rest_framework.response import Response
 
 
 class CustomUserViewSet(UserViewSet):
